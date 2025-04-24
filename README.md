@@ -1,27 +1,39 @@
-# U.S. Real Estate Market Analysis
+# U.S. Real Estate Price Prediction Project
 
-This project analyzes over 2 million home listings across the United States to identify undervalued properties using PySpark and machine learning techniques.
+This project applies machine learning and big data techniques to predict U.S. housing prices using over 1 million listings from the 2024 USA Real Estate dataset. The goal was to estimate home prices based on common features and identify mid-range pricing trends using PySpark.
 
-## 🏠 Project Goal
-Help buyers and real estate professionals spot homes priced below expected value based on home features and location.
+## 🧠 Project Focus
+- Develop regression models to predict log-transformed home prices
+- Evaluate model performance on mid-priced vs. luxury homes
+- Explore geographic and structural factors influencing housing values
 
-## 🔧 Tools & Technologies
-- PySpark (Google Colab)
-- pandas, matplotlib, seaborn
-- Spark MLlib (regression, clustering)
-- USA Real Estate Dataset (Kaggle)
+## 📊 Dataset
+- 1M+ records with price, bed, bath, house size, lot size, and zip code
+- Cleaned to ~680,000 usable listings after handling missing values and outliers
 
-## 🔍 Approach
-- Cleaned large-scale housing data using Spark DataFrames
-- Engineered features (price per square foot, log transformations)
-- Built regression models and clustering to find pricing anomalies
-- Highlighted undervalued homes using model residuals
+## 🛠 Tools & Technologies
+- PySpark (Spark DataFrames, MLlib)
+- Google Colab
+- Python (pandas, matplotlib)
+- Word (report documentation)
 
-## 📈 Outcomes
-- Identified homes priced significantly below predicted market value
-- Provided a scalable process for price prediction and deal discovery
+## 📈 Models Used
+- **Linear Regression:** Baseline model with R² ~0.46
+- **Gradient Boosted Trees (GBT):** Improved accuracy with R² ~0.71, RMSE ~$130,000
+- Feature engineering included log transforms, zip code indexing, and vector assembly
 
-## 📂 Files Included
-- `RealEstate_Analysis.ipynb` – analysis notebook
-- `undervalued_homes.csv` – output from final model
-- Visualizations and insights from exploratory and predictive phases
+## 🚩 Key Outcomes
+- GBT model predicted mid-range housing prices effectively
+- Log-transformed variables improved model accuracy and distribution symmetry
+- High cardinality of zip codes presented encoding challenges
+- Bedrooms had less influence on price than expected; zip code was most important
+- High-end homes were harder to model due to missing luxury-specific features
+
+## 📄 Files Included
+- `Housing Prediction Report.docx`: Full technical report and modeling results
+- Notebook & data (to be added if available)
+
+## 📌 Future Improvements
+- Add neighborhood and school quality data
+- Use geospatial features and price segmentation
+- Build interactive tools or dashboards for price prediction
