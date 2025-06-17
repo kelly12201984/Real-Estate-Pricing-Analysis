@@ -1,6 +1,6 @@
 # U.S. Real Estate Price Prediction Project
 
-This project applies machine learning and big data techniques to predict U.S. housing prices using over 1 million listings from the 2024 USA Real Estate dataset. The goal was to estimate home prices based on common features and identify mid-range pricing trends using PySpark.
+This project applies machine learning and big data techniques to predict U.S. housing prices using over 1 million listings from the 2024 USA Real Estate dataset (https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset). The goal was to estimate home prices based on common features and identify mid-range pricing trends using PySpark.
 
 ## 🧠 Project Focus
 - Develop regression models to predict log-transformed home prices
